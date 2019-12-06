@@ -7,14 +7,14 @@ node_js:
   - 10
   - 12
   - node
+script:
+  - npm install
+  - npm run lint
+  - npm test
 jobs:
   include:
-    - stage: running lint and tests
-      script:
-        - npm install
-        - npm run lint
-        - npm test
     - stage: deploy
+      node_js: 12
       script:
         - npm install
       before_deploy: 'npm run prepublishOnly'
