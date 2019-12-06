@@ -21,7 +21,7 @@ or
 `yarn add to-sentence-case-with-dot`
 
 ## usage
-```
+```js
 const toSentenceCaseWithDot = require('to-sentence-case-with-dot');
 
 const input = 'loREm IPsum DOLOR sit ameT. consectetur! Adipiscing elit? sed DO eiusmod tempor incididunt';
