@@ -28,10 +28,26 @@ describe('toSentenceCaseWithDot', () => {
   });
 
   it('recognizes question mark and exclamation mark as sentence end but not coma or other characters', () => {
-    const input = 'loREm IPsum, DOLOR sit ameT? consectetur: Adipiscing elit! sed DO !@#$%^&*()_+=[]{};\'"<>/`~\| eiusmod tempor incididunt.';
+    const input = 'loREm IPsum, DOLOR sit ameT? consectetur: Adipiscing elit! sed DO !@#$%^&*()_+=[]{};\'"<>/`~\\| eiusmod tempor incididunt.';
 
     const result = toSentenceCaseWithDot(input);
 
-    expect(result).to.equal('Lorem ipsum, dolor sit amet? Consectetur: adipiscing elit! Sed do !@#$%^&*()_+=[]{};\'"<>/`~\| eiusmod tempor incididunt.');
+    expect(result).to.equal('Lorem ipsum, dolor sit amet? Consectetur: adipiscing elit! Sed do !@#$%^&*()_+=[]{};\'"<>/`~\\| eiusmod tempor incididunt.');
+  });
+
+  it('appends a dot if missing - single sentence', () => {
+    const input = 'loREm IPsum DOLOR sit ameT';
+
+    const result = toSentenceCaseWithDot(input);
+
+    expect(result).to.equal('Lorem ipsum dolor sit amet.');
+  });
+
+  it('appends a dot if missing - multiple sentences', () => {
+    const input = 'loREm IPsum DOLOR sit ameT. consectetur Adipiscing elit. sed DO eiusmod tempor incididunt';
+
+    const result = toSentenceCaseWithDot(input);
+
+    expect(result).to.equal('Lorem ipsum dolor sit amet. Consectetur adipiscing elit. Sed do eiusmod tempor incididunt.');
   });
 });
