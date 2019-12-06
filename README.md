@@ -22,7 +22,7 @@ or
 
 ## usage
 ```js
-const toSentenceCaseWithDot = require('to-sentence-case-with-dot');
+const toSentenceCaseWithDot = require('to-sentence-case-with-dot').default;
 
 const input = 'loREm IPsum DOLOR sit ameT. consectetur! Adipiscing elit? sed DO eiusmod tempor incididunt';
 const result = toSentenceCaseWithDot(input);
