@@ -1,5 +1,6 @@
-import toSentenceCaseWithDot from 'to-sentence-case-with-dot/toSentenceCaseWithDot';
+/* eslint-disable max-len */
 import expect from 'to-sentence-case-with-dot/tests/expect';
+import toSentenceCaseWithDot from 'to-sentence-case-with-dot/toSentenceCaseWithDot';
 
 describe('toSentenceCaseWithDot', () => {
   it('converts first letter to upper case and other letters to lower case - single sentence', () => {
