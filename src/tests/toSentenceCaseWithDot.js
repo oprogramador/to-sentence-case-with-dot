@@ -26,4 +26,12 @@ describe('toSentenceCaseWithDot', () => {
 
     expect(result).to.equal('Lorem ipsum dolor sit amet. Consectetur adipiscing elit. Sed do (in the u.s.a and the e.u.) eiusmod tempor incididunt.');
   });
+
+  it('recognizes question mark and exclamation mark as sentence end but not coma or other characters', () => {
+    const input = 'loREm IPsum, DOLOR sit ameT? consectetur: Adipiscing elit! sed DO !@#$%^&*()_+=[]{};\'"<>/`~\| eiusmod tempor incididunt.';
+
+    const result = toSentenceCaseWithDot(input);
+
+    expect(result).to.equal('Lorem ipsum, dolor sit amet? Consectetur: adipiscing elit! Sed do !@#$%^&*()_+=[]{};\'"<>/`~\| eiusmod tempor incididunt.');
+  });
 });
