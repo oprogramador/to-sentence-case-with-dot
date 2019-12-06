@@ -1,5 +1,8 @@
 function toSentenceCaseWithDot(input) {
-  return input.charAt(0).toUpperCase() + input.substr(1).toLowerCase();
+  const sentences = input.split('. ');
+  return sentences
+    .map(sentence => sentence.charAt(0).toUpperCase() + sentence.substr(1).toLowerCase())
+    .join('. ');
 }
 
 export default toSentenceCaseWithDot;

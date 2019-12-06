@@ -9,4 +9,12 @@ describe('toSentenceCaseWithDot', () => {
 
     expect(result).to.equal('Lorem ipsum dolor sit amet.');
   });
+
+  it('converts multiple sentences', () => {
+    const input = 'loREm IPsum DOLOR sit ameT. consectetur Adipiscing elit. sed DO eiusmod tempor incididunt.';
+
+    const result = toSentenceCaseWithDot(input);
+
+    expect(result).to.equal('Lorem ipsum dolor sit amet. Consectetur adipiscing elit. Sed do eiusmod tempor incididunt.');
+  });
 });
