@@ -1,6 +1,6 @@
 {
   "name": "to-sentence-case-with-dot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A JavaScript library converting a string, capitalizing first letter of each sentence and inserting a dot at the end if needed.",
   "main": "build/index.js",
   "scripts": {
