@@ -24,7 +24,6 @@ jobs:
         email: $NPM_EMAIL
         on:
           branch: master
-        skip_cleanup: true
         edge: true
 notifications:
   email:
