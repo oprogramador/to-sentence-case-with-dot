@@ -8,8 +8,11 @@
 )
 
 A JavaScript library which, for each sentence, transforms the first letter to upper case and other letters to lower case.
+
 It appends a dot at the end if not added before.
+
 It recognizes dot `.`, question mark `?` and exclamation mark `!` as characters ending a sentence.
+
 After the character ending a given sentence, there must be a space.
 
 ## install
